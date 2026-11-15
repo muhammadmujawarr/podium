@@ -1,0 +1,52 @@
+[gd_scene format=3 uid="uid://bxpjv1v5r065x"]
+
+[ext_resource type="PackedScene" uid="uid://bmow71pqw0aff" path="res://level_root.tscn" id="2_0xm2m"]
+[ext_resource type="PackedScene" uid="uid://d0ng0omburgcy" path="res://level_2.tscn" id="2_7mycd"]
+[ext_resource type="PackedScene" uid="uid://c4b8274awb7pu" path="res://level3.tscn" id="3_272bh"]
+[ext_resource type="PackedScene" uid="uid://b4m5tnoshgxhf" path="res://level_4.tscn" id="4_5vw27"]
+[ext_resource type="PackedScene" uid="uid://cqiqnis2mgv2u" path="res://going back.tscn" id="5_kek77"]
+[ext_resource type="PackedScene" uid="uid://hybnfrli47ma" path="res://2ndtime.tscn" id="6_4c57u"]
+[ext_resource type="PackedScene" uid="uid://beefxway4na4j" path="res://3rdtime.tscn" id="7_272bh"]
+[ext_resource type="PackedScene" uid="uid://bicoyjs5im4ll" path="res://player.tscn" id="8_5vw27"]
+[ext_resource type="PackedScene" uid="uid://dnufv5k5de4ue" path="res://finish_line.tscn" id="9_kek77"]
+[ext_resource type="PackedScene" uid="uid://8aqvsarq2aio" path="res://death_zone.tscn" id="10_4c57u"]
+[ext_resource type="Texture2D" uid="uid://cuupe6sk34lct" path="res://Screenshot 2026-11-15 140733.png" id="11_efxa6"]
+
+[node name="Main" type="Node2D" unique_id=901687737]
+position = Vector2(34, 29)
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=218210504]
+visibility_layer = 512
+position = Vector2(442, 1020)
+scale = Vector2(5.650815, 3.6458745)
+texture = ExtResource("11_efxa6")
+
+[node name="LevelRoot" parent="." unique_id=315003041 instance=ExtResource("2_0xm2m")]
+position = Vector2(-28, -29)
+
+[node name="level2" parent="." unique_id=42347598 instance=ExtResource("2_7mycd")]
+position = Vector2(1123, 17)
+
+[node name="LevelRoot2" parent="." unique_id=2021221887 instance=ExtResource("3_272bh")]
+position = Vector2(1121, 682)
+
+[node name="level4" parent="." unique_id=2070928275 instance=ExtResource("4_5vw27")]
+position = Vector2(1184, 1269)
+
+[node name="Node2D" parent="." unique_id=312536995 instance=ExtResource("5_kek77")]
+position = Vector2(-1178, 473)
+
+[node name="Node2D2" parent="." unique_id=1016819429 instance=ExtResource("6_4c57u")]
+position = Vector2(-15, 1170)
+
+[node name="Node2D3" parent="." unique_id=1400181930 instance=ExtResource("7_272bh")]
+position = Vector2(-1209, 870)
+
+[node name="Player" parent="." unique_id=766558830 instance=ExtResource("8_5vw27")]
+position = Vector2(140, 427)
+
+[node name="FinishLine" parent="." unique_id=1079282957 instance=ExtResource("9_kek77")]
+position = Vector2(-1065, 495)
+
+[node name="DeathZone" parent="." unique_id=1743505200 instance=ExtResource("10_4c57u")]
+position = Vector2(19, 2279)

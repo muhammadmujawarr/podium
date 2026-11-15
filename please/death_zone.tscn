@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://8aqvsarq2aio"]
+
+[sub_resource type="GDScript" id="GDScript_jjf46"]
+script/source = "extends Area2D
+
+func _ready() -> void:
+	body_entered.connect(_on_body_entered)
+
+
+func _on_body_entered(body: Node2D) -> void:
+	if body is CharacterBody2D:
+		print(\"YOU DIED!\")
+		get_tree().reload_current_scene()
+"
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ek5ad"]
+size = Vector2(7584, 394)
+
+[node name="DeathZone" type="Area2D" unique_id=1743505200]
+script = SubResource("GDScript_jjf46")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1596039265]
+position = Vector2(464, 187)
+shape = SubResource("RectangleShape2D_ek5ad")
